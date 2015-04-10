@@ -1,4 +1,4 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-    document.getElementById('octocat').addEventListener(function () { alert('hi!') });
+    document.getElementById('octocat').addEventListener("click", function () { alert('hi!') });
 
 });
