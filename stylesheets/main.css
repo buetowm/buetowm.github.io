@@ -64,6 +64,7 @@ nav {
 	display: block;
 	overflow: hidden;
 }
+
 nav img{
 	vertical-align: middle;
 	margin: 0 25px 0 25px;
@@ -84,7 +85,6 @@ nav ul li {
 	list-style-type: none;
 	margin-left: -5px;
 	transition: all .6s; 
-	z-index: 100;
 }
 
 nav > ul > li:not(.single) > a:after{
@@ -119,8 +119,7 @@ nav > ul > li > div {
 	visibility: hidden;
 	position: absolute;
 	width: 165px;
-	transform: translateY(-60px);
-	z-index: -1;
+	transform: translateY(30px);
 	transition: all .6s;
 }
 
@@ -142,5 +141,25 @@ nav > ul > li > div ul > li:hover > a {
 nav > ul > li:hover > div {
 	opacity: 1;
 	visibility: visible;
-	transform: translateY(1px);
+	transform: translateY(0);
+}
+
+#container {
+	padding: 10px 10px;
+}
+
+#container .inner
+{
+	border-radius: 5px;
+	background-color: white;
+	padding: 20px;
+}
+
+h3
+{
+	font-size: 36px;
+	font-weight: 500;
+	color: #aaa;
+	line-height: 1.5;
+	margin: 4px 0;
 }
