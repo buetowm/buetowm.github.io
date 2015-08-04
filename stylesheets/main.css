@@ -59,16 +59,27 @@ body {
 }
 
 nav {
-	background-color: #fff;
-	color: #888;
+	background-image: url(../images/star-banner.png);
 	display: block;
 	overflow: hidden;
+    min-width: 600px;
+    position: fixed;
+    width: 100%;
 }
 
 nav img{
 	vertical-align: middle;
-	margin: 0 25px 0 25px;
-	transition: transform .6s;
+	margin: 25px;
+	transition: transform .6s, margin .3s;
+	cursor: pointer;
+    width:20px;
+    height: 20px;
+
+}
+
+
+#externalLinks {
+   float: right;
 }
 
 nav img:hover{
@@ -84,29 +95,26 @@ nav ul li {
 	display: inline-block;
 	list-style-type: none;
 	margin-left: -5px;
-	transition: all .6s; 
+	transition: all .4s; 
 }
 
 nav > ul > li:not(.single) > a:after{
 	content: "\2193";
 	margin-left: 5px;
-	transition: color .6s;
 }
 
 nav > ul > li:hover > a:after{
-	color: rgb( 40, 44, 47 );
+	visibility: hidden;
 }
 
 nav > ul > li > a {
 	color: #aaa;
 	display: block;
-	padding: 27px 24px;
+    padding: 25px 24px;
 	text-decoration: none;
+    transition: padding .3s;
 }
 
-nav > ul > li:hover {
-  background-color: rgb( 40, 44, 47 );
-}
 
 nav > ul > li:hover > a {
   color: rgb( 255, 255, 255 );
@@ -117,10 +125,27 @@ nav > ul > li > div {
 	border-radius: 0 0 4px 4px;
 	opacity: 0;
 	visibility: hidden;
-	position: absolute;
+	position: fixed;
 	width: 165px;
-	transform: translateY(30px);
-	transition: all .6s;
+	transition: top .4s;
+    z-index: 10;
+    top: 105px;
+    margin-top: 6px;
+}
+
+
+.upCaret:before 
+{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 53px;
+    border-style: solid;
+    border-width: 0 7px 7px;
+    border-color: rgb( 40, 44, 47 ) transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
 }
 
 nav > ul > li > div ul > li {
@@ -141,7 +166,12 @@ nav > ul > li > div ul > li:hover > a {
 nav > ul > li:hover > div {
 	opacity: 1;
 	visibility: visible;
-	transform: translateY(0);
+    top: 63px;
+}
+
+#container div:first-child 
+{
+    margin-top: 75px;
 }
 
 #container {
@@ -153,6 +183,8 @@ nav > ul > li:hover > div {
 	border-radius: 5px;
 	background-color: white;
 	padding: 20px;
+	max-width: 900px;
+	margin: 10px auto;
 }
 
 h3
@@ -160,6 +192,20 @@ h3
 	font-size: 36px;
 	font-weight: 500;
 	color: #aaa;
-	line-height: 1.5;
-	margin: 4px 0;
+    width: 40%;
+    margin: 0 0 4px 0;
+    border-bottom: ridge;
+    border-color: rgb(39, 224, 98);
+    border-width: 1px;
+       
 }
+
+img.navMin 
+{
+    margin: 10px 15px;
+}
+
+a.navMin {
+    padding: 10px 24px;
+}
+
